@@ -23,14 +23,6 @@
 		}
 	};
 
-
-
-	var parallax = function() {
-		if ( !isMobile.any()) {
-			$(window).stellar();
-		}
-	};
-
 	var mobileMenuOutsideClick = function() {
 
 		$(document).click(function (e) {
@@ -319,7 +311,6 @@
 
 	
 	$(function(){
-		parallax();
 		mobileMenuOutsideClick();
 		header();
 		navigation();

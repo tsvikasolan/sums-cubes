@@ -177,19 +177,14 @@ h1, h2, h3, h4, h5, h6, figure {
 	width: 100%;
 	padding: 20px 0;
 	z-index: 1001;
+	min-height: 70px;
 	@include transition(.3s);
 	
 	@media screen and (max-width: $screen-sm) {
 		padding: 20px 0;
 	}
 	#gtco-logo {
-		font-size: 30px;
-
-		line-height: 1;
-		margin: 0;
-		padding: 0;
-		font-weight: bold;
-	
+		display: none;	
 		em {
 			color: $brand-white;
 			font-weight: 100;
@@ -217,13 +212,14 @@ h1, h2, h3, h4, h5, h6, figure {
 			margin: 0;
 			list-style: none;
 			display: inline;
+			white-space: nowrap;
 			a {
 				font-size: 12px;
 				padding: 15px 10px;
 				margin: 10px 0;
 				text-transform: uppercase;
 				color: rgba(255,255,255,.5);
-				font-weight: 400!important;
+				font-weight: 800!important;
 				@include transition(.5s);
 				&:hover,&:focus, &:active {
 					color: $brand-white;
@@ -324,10 +320,15 @@ h1, h2, h3, h4, h5, h6, figure {
 		}
 	}
 	&.scrolled {
-		background: $brand-white;
+		background: url(../images/logo1.svg) 5px no-repeat #fff;
+		background-size: contain;
 		webkit-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.15);
 		-moz-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.15);
 		box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.15);
+		#gtco-logo{
+			display: block;
+			position: absolute;
+		}
 		ul {
 			padding: 0;
 			margin: 1px 0 0 0;
@@ -336,7 +337,6 @@ h1, h2, h3, h4, h5, h6, figure {
 				margin: 0;
 				list-style: none;
 				display: inline;
-				white-space: nowrap;
 				a {
 					color: rgba(0, 0, 0, .5);
 					&:hover {
@@ -491,12 +491,10 @@ h1, h2, h3, h4, h5, h6, figure {
 	}
 }
 .gtco-cover {
-	height: 900px;
-
 	background-size: cover;
 	background-repeat: no-repeat;
+	background-position: center center;
 	position: relative;
-	float: left;
 	width: 100%;
 	a {
 		color: $brand-primary;
@@ -519,9 +517,6 @@ h1, h2, h3, h4, h5, h6, figure {
 	> .container {
 		position: relative;
 		z-index: 10;
-	}
-	@media screen and (max-width: $screen-sm) {
-		height: 600px;
 	}
 	.display-t,
 	.display-tc {
@@ -576,6 +571,7 @@ h1, h2, h3, h4, h5, h6, figure {
 section {
 	padding: 7em 0;
 	clear: both;
+	transition-property: background-position;
 }
 
 .light{
@@ -611,7 +607,7 @@ section {
 
 }
 
-#gtco-practice-areas {
+section {
 	.heading {
 		position: relative;
 		.subtle-text {
@@ -637,10 +633,15 @@ section {
 			vertical-align: top;
 		}
 		.gtco-icon {
-			width: 100px;
-			@media screen and (max-width: $screen-sm) {
-				width: 70px;
+			margin-right: 10px;
+			float: left;
+			img{
+				width: 100px;
+				@media screen and (max-width: $screen-sm) {
+					width: 70px;
+				}
 			}
+			display: inline;
 		}
 		.gtco-copy {
 			h3 {
@@ -739,10 +740,9 @@ section {
 }
 
 .heading {
-	text-align: center;
 	margin-bottom: 70px;
 	h1 {
-		margin-bottom: 10px;
+		margin-bottom: 30px;
 		@media screen and (max-width: $screen-sm) {
 			font-size: 26px;
 		}
@@ -860,7 +860,6 @@ form {
 .gtco-cover {
 	.display-tc {
 		display: table-cell!important;
-		vertical-align: middle;
 		h1, h2 {
 			margin: 0;
 			padding: 0;
