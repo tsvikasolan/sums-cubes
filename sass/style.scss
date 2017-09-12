@@ -111,7 +111,7 @@ body {
 	font-size: 16px;
 	line-height: 1.8;
 	color: $brand-darker;
-	background: $brand-white;
+	background: $brand-white url(../images/canvas.jpg);
 }
 #page {
 	position: relative;
@@ -145,7 +145,7 @@ a {
 		text-decoration: none;
 	}
 }
-p {
+p,ul {
 	margin-bottom: 30px;
 }
 
@@ -864,6 +864,7 @@ form {
 			margin: 0;
 			padding: 0;
 			color: rgba(255,255,255,1);
+			font-family: 'Vast Shadow';
 		}
 		h1 {
 			margin-bottom: 30px;
@@ -877,9 +878,9 @@ form {
 			}
 		}
 		h2 {
-			font-size: 22px;
+			font-size: 30px;
 			line-height: 1.5;
-			margin-bottom: 30px;
+			margin: 30px 0;
 		}
 		
 	}
