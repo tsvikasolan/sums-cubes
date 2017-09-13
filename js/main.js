@@ -299,6 +299,10 @@
 		});
 	
 	};
+	
+	var formChimp = function(){
+		$("#mc-embedded-subscribe-form").formchimp();
+	}
 
 
 	// Loading page
@@ -320,6 +324,7 @@
 		contentWayPoint();
 		dropdown();
 		goToTop();
+		formChimp();
 		loaderPage();
 	});
 
