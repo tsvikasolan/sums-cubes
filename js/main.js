@@ -1,4 +1,4 @@
-;(function () {
+(function () {
 	
 	'use strict';
 
@@ -302,7 +302,8 @@
 	
 	var formChimp = function(){
 		$("#mc-embedded-subscribe-form").formchimp();
-	}
+		$("#contact-form").formchimp();
+	};
 
 
 	// Loading page
