@@ -301,8 +301,51 @@
 	};
 	
 	var formChimp = function(){
-		$("#mc-embedded-subscribe-form").formchimp();
-		$("#contact-form").formchimp();
+		var errorMessage = "Desculpe, houve um erro. Por favor, tente novamente mais tarde.";
+		var signupSuccess = "Obrigado por inscrever-se!";
+		var contactSuccess = "Obrigado por nos contatar. Nós estaremos em contato em breve.";
+		var mailChimpForm = $("#mc-embedded-subscribe-form");
+		
+		mailChimpForm.formchimp({
+			errorMessage: errorMessage,
+			successMessage: signupSuccess, 
+			onMailChimpError: function(){
+				$responseContainer.hide();
+				$responseContainer.fadeIn();
+			},
+			onMailChimpSuccess: function(mailChimpForm){
+				var response = $responseContainer;
+				response.hide();
+				
+				response.parent().fadeOut(function(){
+					$(this).replaceWith(response)
+					response.fadeIn();
+				});
+			}
+		});
+		$("#contact-form").submit(function (e) {
+			var form = $(this);
+		
+	        e.preventDefault();
+			
+			$('.contact-response').remove();
+			$('<div class="contact-response">').appendTo(form).hide();
+			
+	        $.ajax({
+	            type: form.attr('method'),
+	            url: form.attr('action'),
+	            data: form.serialize(),
+	            success: function (data) {
+	                form.fadeOut(function(){
+	                	form.html(contactSuccess);
+	                	form.fadeIn();
+	                });
+	            },
+	            error: function (data) {
+	                $('.contact-response').html(errorMessage).fadeIn();
+	            },
+	        });
+	    });
 	};
 
 
