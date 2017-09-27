@@ -1523,3 +1523,26 @@ form label {
 .js .animate-box {
   opacity: 0;
 }
+
+/* line 1364, ../sass/style.scss */
+#cookie-message {
+  z-index: 1000;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+/* line 1370, ../sass/style.scss */
+#cookie-message .inner-message {
+  background: rgba(255, 255, 255, 0.8);
+  margin-bottom: 0;
+  font-size: 0.75em;
+}
+
+/* line 1377, ../sass/style.scss */
+figcaption {
+  text-transform: uppercase;
+  font-size: 0.75em;
+  font-weight: 600;
+  padding: 0.5em;
+}
