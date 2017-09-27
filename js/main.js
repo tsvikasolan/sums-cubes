@@ -327,14 +327,14 @@
 			var form = $(this);
 		
 	        e.preventDefault();
-	        
-	    	if($("#tester").val() != ""){
-	    		 $('.contact-response').html(errorMessage).fadeIn();
-	    		 return;
-	    	}
 			
 			$('.contact-response').remove();
 			$('<div class="contact-response">').appendTo(form).hide();
+			
+			if($("#tester").val() != ""){
+	    		 $('.contact-response').html(errorMessage).fadeIn();
+	    		 return;
+	    	}
 			
 	        $.ajax({
 	            type: form.attr('method'),
