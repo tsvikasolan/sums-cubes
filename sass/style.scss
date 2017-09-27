@@ -111,7 +111,7 @@ body {
 	font-size: 16px;
 	line-height: 1.8;
 	color: $brand-darker;
-	background: $brand-white url(../images/canvas.jpg);
+	background: $brand-white url(../images/sums-cubes-bag-bg.jpg);
 }
 #page {
 	position: relative;
@@ -569,7 +569,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 section {
-	padding: 7em 0;
+	padding: 6em 0;
 	clear: both;
 	transition-property: background-position;
 }
@@ -605,6 +605,11 @@ section {
 		}
 	}
 
+}
+
+div.interstitial{
+	height:450px;
+	margin-top:-150px;
 }
 
 section {
