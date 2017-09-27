@@ -302,8 +302,8 @@
 	
 	var formChimp = function(){
 		var errorMessage = "Desculpe, houve um erro. Por favor, tente novamente mais tarde.";
-		var signupSuccess = "Obrigado por inscrever-se!";
-		var contactSuccess = "Obrigado por nos contatar. Nós estaremos em contato em breve.";
+		var signupSuccess = "Obrigado pelo seu registro!";
+		var contactSuccess = "Obrigado por nos contactar. Entraremos em contacto consigo em breve.";
 		var mailChimpForm = $("#mc-embedded-subscribe-form");
 		
 		mailChimpForm.formchimp({
