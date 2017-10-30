@@ -375,6 +375,7 @@
 		goToTop();
 		formChimp();
 		loaderPage();
+		$.scrollDepth();
 	});
 
 
