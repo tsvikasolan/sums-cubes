@@ -67,6 +67,10 @@
 	word-break: break-all;
 }
 
+.error{
+	color: red !important;
+}
+
 /* drop-down list / text element */
 .nl-field ul {
 	position: absolute;
@@ -239,23 +243,6 @@ input:focus::-ms-input-placeholder {
 	background: rgba(0,0,0,0.2);
 }
 
-.no-touch .nl-form .nl-submit:hover,
-.no-touch .nl-form .nl-submit:active{
-	background: #4CC417;
-}
-.no-touch .nl-form .nl-adder:hover,
-.no-touch .nl-form .nl-adder:active{
-	background: #4CC417;
-}
-
-.no-touch .nl-form .nl-submit:hover:before {
-	background: #347235;
-}
-
-.no-touch .nl-form .nl-adder:hover:before {
-	background: #347235;
-}
-
 /* overlay becomes visible when a field is opened */
 .nl-overlay {
 	position: fixed;
@@ -300,6 +287,7 @@ fieldset{
 	margin: 1em 0;
 	background: rgba(0,0,0,0.02);
 	border: 0;
+	position: relative;
 }
 
 .nl-form .nl-adder{
@@ -307,6 +295,7 @@ fieldset{
 	border: 1px dashed #347235;
 	font-size: 50%;
 	color: #254117;
+	line-height: 1.5;
 }
 
 .nl-adder:before{
@@ -321,7 +310,7 @@ fieldset{
 	margin: 2em auto;
 }
 
-button.info{
+button.info, button.delete{
 	font-size: 30%;
 	border: 1px dashed #347235;
 	padding: 0.25em 0.75em;
@@ -329,4 +318,10 @@ button.info{
 	font-weight: 500;
     vertical-align: top;
     margin-top: 1em;
+}
+
+button.delete{
+	position: absolute;
+	top: -1em;
+	left: 0;
 }

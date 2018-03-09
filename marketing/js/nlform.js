@@ -22,6 +22,7 @@
 		this.el = el;
 		this.overlay = document.getElementById( 'overlay' );
 		this.adder = this.el.querySelector( '.nl-adder' );
+		this.remover = this.el.getElementsByClassName("delete");
 		this.template = document.getElementById("template");
 		this.fields = [];
 		this.fldOpen = -1;
@@ -38,6 +39,12 @@
 			this.overlay.addEventListener( 'touchstart', function(ev) { self._closeFlds(); } );
 			
 			this.adder.addEventListener( 'click', function(ev) { self._addSection(ev, self); } );
+			
+			if(this.remover.length){
+				for(var i = 0; i < this.remover.length; i++){
+					this.remover[i].addEventListener( 'click', function(ev) { self._removeSection(ev, self); } );
+				}
+			}
 		},
 		_processFlds: function(self){
 			Array.prototype.slice.call( this.el.querySelectorAll( 'select' ) ).forEach( function( el, i ) {
@@ -52,6 +59,13 @@
 				self.fldOpen++;
 				self.fields.push( new NLField( self, el, 'input', self.fields.length ) );
 			} );
+			
+			var remover = this.el.getElementsByClassName("delete");
+			if(remover.length){
+				for(var i = 0; i < remover.length; i++){
+					remover[i].addEventListener( 'click', function(ev) { self._removeSection(ev, self); } );
+				}
+			}
 		},
 		_closeFlds : function() {
 			if( this.fldOpen !== -1 ) {
@@ -64,11 +78,14 @@
 			newFields.removeAttribute("id");
 			
 			this._processFlds(self);
+		},
+		_removeSection: function(e, self){
+			e.preventDefault(); e.stopPropagation(); 
+			self.el.removeChild(e.srcElement.parentElement);
 		}
 	}
 
 	function NLField( form, el, type, idx ) {
-		console.log("idx: "+idx);
 		this.form = form;
 		this.elOriginal = el;
 		this.pos = idx;
@@ -86,6 +103,7 @@
 				this._createInput();	
 			}
 			this.elOriginal.dataset.processed = "processed";
+			this.toggle.className = this.toggle.className + " " + this.elOriginal.className;
 		},
 		_createDropDown : function() {
 			var self = this;
@@ -185,6 +203,8 @@
 			this.open = false;
 			this.form.fldOpen = -1;
 			this.fld.className = this.fld.className.replace(/\b nl-field-open\b/,'');
+			this.toggle.className = this.toggle.className.replace(/\b error\b/,'');
+
 
 			if( this.type === 'dropdown' ) {
 				if( opt ) {

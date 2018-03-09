@@ -131,7 +131,7 @@ body {
 			bottom: 0;
 			left: 0;
 			z-index: 101;
-			background: rgba(0,0,0,.7);
+			background: rgba($brand-black,.7);
 			content: "";
 		}
 	}
@@ -218,21 +218,20 @@ h1, h2, h3, h4, h5, h6, figure {
 				padding: 15px 10px;
 				margin: 10px 0;
 				text-transform: uppercase;
-				color: rgba(255,255,255,.5);
-				font-weight: 800!important;
+				color: rgba($brand-black,.75);
+				font-weight: 600 !important;
 				@include transition(.5s);
 				&:hover,&:focus, &:active {
-					color: $brand-white;
-					// color: rgba(255,255,255,1);
+					color: rgba($brand-black,1);
 				}
 			}
 			&.has-dropdown {
 				position: relative;
 				.dropdown {
 					width: 130px;
-					-webkit-box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.15);
-					-moz-box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.15);
-					box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.15);
+					-webkit-box-shadow: 0px 4px 5px 0px rgba($brand-black,0.15);
+					-moz-box-shadow: 0px 4px 5px 0px rgba($brand-black,0.15);
+					box-shadow: 0px 4px 5px 0px rgba($brand-black,0.15);
 					z-index: 1002;
 					visibility: hidden;
 					opacity: 0;
@@ -295,10 +294,10 @@ h1, h2, h3, h4, h5, h6, figure {
 			}
 			&.btn-cta {
 				a {
-					color: $brand-white;
+					color: rgba($brand-black, 0.75);
 					span {
 						border: none!important;
-						background: rgba(255,255,255,.2);
+						background: rgba($brand-white,.2);
 						padding: 4px 20px;
 						@include inline-block;
 						@include transition(.3s);
@@ -307,7 +306,7 @@ h1, h2, h3, h4, h5, h6, figure {
 					&:hover {
 						span {
 							background: lighten($brand-primary, 5%);
-							color: $brand-white;
+							color: rgba($brand-black, 1);
 						}
 					}
 				}
@@ -322,9 +321,9 @@ h1, h2, h3, h4, h5, h6, figure {
 	&.scrolled {
 		background: url(../images/logo1.svg) 5px no-repeat #fff;
 		background-size: contain;
-		webkit-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.15);
-		-moz-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.15);
-		box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.15);
+		webkit-box-shadow: 0px 1px 3px 0px rgba($brand-black,0.15);
+		-moz-box-shadow: 0px 1px 3px 0px rgba($brand-black,0.15);
+		box-shadow: 0px 1px 3px 0px rgba($brand-black,0.15);
 		#gtco-logo{
 			display: block;
 			position: absolute;
@@ -338,9 +337,9 @@ h1, h2, h3, h4, h5, h6, figure {
 				list-style: none;
 				display: inline;
 				a {
-					color: rgba(0, 0, 0, .5);
+					color: rgba($brand-black, .5);
 					&:hover {
-						color: rgba(0, 0, 0, 1);
+						color: rgba($brand-black, 1);
 					}
 				}
 				&.active {
@@ -372,7 +371,7 @@ h1, h2, h3, h4, h5, h6, figure {
 #gtco-hero {
 	.gtco-video-link {
 		a {
-			color: rgba(255,255,255,.5);
+			color: rgba($brand-white,.5);
 			i {
 				font-size: 78px;
 				top: 2px;
@@ -390,7 +389,7 @@ h1, h2, h3, h4, h5, h6, figure {
 			}
 			
 			&:hover {
-				color: rgba(255,255,255,1);
+				color: rgba($brand-white,1);
 				i {
 					-webkit-transform: scale(1.1);
 					-moz-transform: scale(1.1);
@@ -453,9 +452,9 @@ h1, h2, h3, h4, h5, h6, figure {
 		text-align: center;
 		background: $brand-white;
 		
-		-webkit-box-shadow: 0px 14px 30px -15px rgba(0,0,0,0.75);
-		-moz-box-shadow: 0px 14px 30px -15px rgba(0,0,0,0.75);
-		box-shadow: 0px 14px 30px -15px rgba(0,0,0,0.75);
+		-webkit-box-shadow: 0px 14px 30px -15px rgba($brand-black,0.75);
+		-moz-box-shadow: 0px 14px 30px -15px rgba($brand-black,0.75);
+		box-shadow: 0px 14px 30px -15px rgba($brand-black,0.75);
 		@include border-radius(50%);
 		
 		i {
@@ -472,12 +471,12 @@ h1, h2, h3, h4, h5, h6, figure {
 		left: 0;
 		right: 0;
 		bottom: 0;
-		background: rgba(0, 0, 0, .5);
+		background: rgba($brand-black, .5);
 		@include transition(.5s);
 	}
 	&:hover {
 		.overlay {
-			background: rgba(0, 0, 0, .7);
+			background: rgba($brand-black, .7);
 		}
 		a {
 			position: relative;
@@ -499,7 +498,7 @@ h1, h2, h3, h4, h5, h6, figure {
 	a {
 		color: $brand-primary;
 		&:hover {
-			color: rgba(255,255,255,1);
+			color: rgba($brand-white,1);
 		}
 	}
 	.overlay {
@@ -511,7 +510,7 @@ h1, h2, h3, h4, h5, h6, figure {
 		right: 0;
 		background: rgba(35, 35, 35, .5);
 		&.light{
-			background: rgba(255, 255, 255, .75);
+			background: rgba($brand-white, .5);
 		}
 	}
 	> .container {
@@ -575,7 +574,7 @@ section {
 }
 
 .light{
-	background: rgba(255, 255, 255, .5);
+	background: rgba($brand-white, .5);
 }
 
  #gtco-about {
@@ -868,7 +867,6 @@ form {
 		h1, h2 {
 			margin: 0;
 			padding: 0;
-			color: rgba(255,255,255,1);
 			font-family: 'Vast Shadow';
 		}
 		h1 {
@@ -978,9 +976,9 @@ form {
 		@include translateX(0px);
 	}
 	a {
-		color: rgba(255,255,255,.5);
+		color: rgba($brand-white,.5);
 		&:hover {
-			color: rgba(255,255,255,.8);
+			color: rgba($brand-white,.8);
 		}
 	}
 	ul {
@@ -1004,7 +1002,7 @@ form {
 						@include icomoon;
 						content: "\e921";
 						font-size: 20px;
-						color: rgba(255,255,255,.2);
+						color: rgba($brand-white,.2);
 						@include transition(.5s);
 					}
 				}
@@ -1047,7 +1045,7 @@ form {
 		width: 50px;
 		height: 50px;
 		display: table;
-		background: rgba(0,0,0,.5);
+		background: rgba($brand-black,.5);
 		color: $brand-white;
 		text-align: center;
 		@include border-radius(4px);
@@ -1374,7 +1372,7 @@ form {
     left: 0;
     width: 100%;
     .inner-message{
-    	background: rgba(255,255,255,0.8);
+    	background: rgba($brand-white,0.8);
 	    margin-bottom: 0;
 	    font-size: 0.75em;
     }
