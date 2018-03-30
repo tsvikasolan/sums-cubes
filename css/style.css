@@ -1552,3 +1552,9 @@ figcaption {
   font-weight: 600;
   padding: 0.5em;
 }
+
+/* line 1388, ../sass/style.scss */
+#sumsumlogo {
+  max-width: 400px;
+  height: auto;
+}
