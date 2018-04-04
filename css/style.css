@@ -47,14 +47,14 @@ body {
 
 /* line 140, ../sass/style.scss */
 a {
-  color: #ad9900;
+  color: #70af73;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
 }
 /* line 143, ../sass/style.scss */
 a:hover, a:active, a:focus {
-  color: #ad9900;
+  color: #70af73;
   outline: none;
   text-decoration: none;
 }
@@ -76,19 +76,19 @@ h1, h2, h3, h4, h5, h6, figure {
 /* line 160, ../sass/style.scss */
 ::-webkit-selection {
   color: #fff;
-  background: #ad9900;
+  background: #70af73;
 }
 
 /* line 165, ../sass/style.scss */
 ::-moz-selection {
   color: #fff;
-  background: #ad9900;
+  background: #70af73;
 }
 
 /* line 169, ../sass/style.scss */
 ::selection {
   color: #fff;
-  background: #ad9900;
+  background: #70af73;
 }
 
 /* line 174, ../sass/style.scss */
@@ -262,7 +262,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 /* line 309, ../sass/style.scss */
 .gtco-nav ul li.btn-cta a:hover span {
-  background: #c7b000;
+  background: #80b883;
   color: black;
 }
 /* line 317, ../sass/style.scss */
@@ -304,7 +304,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 /* line 348, ../sass/style.scss */
 .gtco-nav.scrolled ul li.active > a {
-  color: #ad9900 !important;
+  color: #70af73 !important;
 }
 /* line 353, ../sass/style.scss */
 .gtco-nav.scrolled ul li.btn-cta a {
@@ -313,7 +313,7 @@ h1, h2, h3, h4, h5, h6, figure {
 /* line 355, ../sass/style.scss */
 .gtco-nav.scrolled ul li.btn-cta a span {
   border: none !important;
-  background: #ad9900;
+  background: #70af73;
   padding: 4px 20px;
   color: #fff;
 }
@@ -471,7 +471,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 /* line 500, ../sass/style.scss */
 .gtco-cover a {
-  color: #ad9900;
+  color: #70af73;
 }
 /* line 502, ../sass/style.scss */
 .gtco-cover a:hover {
@@ -584,7 +584,7 @@ section {
 /* line 584, ../sass/style.scss */
 #gtco-about .img-shadow {
   position: relative;
-  background: #ad9900;
+  background: #70af73;
   width: 100%;
   float: left;
 }
@@ -700,7 +700,7 @@ section .gtco-practice-area-item .gtco-copy h3 {
 #gtco-our-team .gtco-team-reverse .img-shadow,
 #gtco-our-team .gtco-team .img-shadow {
   position: relative;
-  background: #ad9900;
+  background: #70af73;
   width: 100%;
   float: left;
   margin-bottom: 30px;
@@ -788,12 +788,12 @@ section .gtco-practice-area-item .gtco-copy h3 {
   position: absolute;
   width: 72px;
   height: 2px;
-  background: #ad9900;
+  background: #70af73;
 }
 
 /* line 773, ../sass/style.scss */
 .heading-colored {
-  color: #ad9900;
+  color: #70af73;
 }
 
 /* line 777, ../sass/style.scss */
@@ -830,7 +830,7 @@ section .gtco-practice-area-item .gtco-copy h3 {
   display: inline-block;
   zoom: 1;
   *display: inline;
-  color: #ad9900;
+  color: #70af73;
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -861,7 +861,7 @@ section .gtco-practice-area-item .gtco-copy h3 {
 }
 /* line 822, ../sass/style.scss */
 .gtco-contact-info ul li:before {
-  color: #ad9900;
+  color: #70af73;
   position: absolute;
   left: 0;
   top: .05em;
@@ -1323,24 +1323,24 @@ form label {
 
 /* line 1197, ../sass/style.scss */
 .btn-primary {
-  background: #ad9900;
+  background: #70af73;
   color: #fff;
-  border: 2px solid #ad9900 !important;
+  border: 2px solid #70af73 !important;
 }
 /* line 1201, ../sass/style.scss */
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
-  background: #c7b000 !important;
-  border-color: #c7b000 !important;
+  background: #80b883 !important;
+  border-color: #80b883 !important;
 }
 /* line 1205, ../sass/style.scss */
 .btn-primary.btn-outline {
   background: transparent;
-  color: #ad9900;
-  border: 2px solid #ad9900;
+  color: #70af73;
+  border: 2px solid #70af73;
 }
 /* line 1209, ../sass/style.scss */
 .btn-primary.btn-outline:hover, .btn-primary.btn-outline:focus, .btn-primary.btn-outline:active {
-  background: #ad9900;
+  background: #70af73;
   color: #fff;
 }
 
