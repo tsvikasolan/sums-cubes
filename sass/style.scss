@@ -1,4 +1,5 @@
 $font-primary: 'Open Sans', Arial, sans-serif;
+$font-secondary: 'Shadows Into Light', cursive;
 
 
 // Overrides
@@ -111,7 +112,7 @@ body {
 	font-size: 16px;
 	line-height: 1.8;
 	color: $brand-darker;
-	background: $brand-white url(../images/sums-cubes-bag-bg.jpg);
+	background: $brand-white;
 }
 #page {
 	position: relative;
@@ -151,9 +152,10 @@ p,ul {
 
 h1, h2, h3, h4, h5, h6, figure {
 	color: $brand-black;
-	font-family: $font-primary;
+	font-family: $font-secondary;
 	font-weight: 400;
 	margin: 0 0 30px 0;
+	font-size: 200%;
 }
 ::-webkit-selection {
   color: $brand-white;
@@ -867,23 +869,25 @@ form {
 		h1, h2 {
 			margin: 0;
 			padding: 0;
-			font-family: 'Vast Shadow';
+			font-family: $font-secondary;
 		}
 		h1 {
-			margin-bottom: 30px;
-			font-size: 59px;
+			margin: 30px 0;
+			font-size: 300%;
 			line-height: 1.5;
-			font-weight: 100;
+			font-weight: 600;
 			@media screen and (max-width: $screen-sm) {
-				font-size: 34px;
-				line-height: 1.2;
-				margin-bottom: 10px;
+				font-size: 200%;
 			}
 		}
 		h2 {
-			font-size: 30px;
+			font-size: 250%;
+			font-weight: 600;
 			line-height: 1.5;
 			margin: 30px 0;
+			@media screen and (max-width: $screen-sm) {
+				font-size: 150%;
+			}
 		}
 		
 	}
