@@ -14,7 +14,6 @@
 	</head>
 	<body class="nl-blurred">
 		<?php
-		session_start();
 		
 		if(!isset($_POST['submit'])){
 			//NOT returned due to error, so reset session values
@@ -24,7 +23,7 @@
 		
 		
 		function mapvalues($string){
-			$map = ['dog' => 'cão', 'cat' => 'gato', 'kibble' => 'ração seca', 'cooked' => 'alimentação cozinhada', 'raw' => 'alimentação crua'];
+			$map = ['dog' => 'cão', 'cat' => 'gato', 'kibble' => 'ração seca', 'canned' => 'comida húmida (enlatada)', 'cooked' => 'alimentação cozinhada (caseira, artesanal, etc)', 'raw' => 'alimentação crua (caseira, artesanal, etc)'];
 			return $map[$string];
 		}
 		
@@ -49,11 +48,11 @@
 		}
 		?>
 		<div class="container">
-			<header>
+			<!-- <header>
 				<img src="petfood-pt-logo.png" />
 				<h1>Alimentos para cães e gatos, diretamente para sua casa</h1>
 				<h3><a href="#">Como funciona?</a> | <a href="#">Opções de comida</a></h3>
-			</header>
+			</header> -->
 			<div class="main clearfix">
 				<h2>Conte-nos um pouco sobre você e seus animais de estimação:</h2>
 				<?php if(isset($_POST['submit'])): ?>
@@ -70,18 +69,18 @@
 							<input type="hidden" name="pet[]" value="<?php echo (count($_SESSION['pet_ids']) > 0 ? $_SESSION['pet_ids'][$index] : "");  ?>" />
 							Tenho <?php if($index > 0) echo "também"; ?> um <?php field('pet_type[]', null, $index , ['dog','cat']); ?>
 							, chama-se <?php field('pet_name[]', null, $index) ?>, tem <?php field('pet_weight[]', null, $index) ?> kg, 
-							e gostaria de comer <?php field('pet_food_type[]', null, $index, ['kibble','cooked','raw']); ?>
-							</select>. <button class="info">?</button>
+							e gostaria de comer <?php field('pet_food_type[]', null, $index, ['kibble','canned','cooked','raw']); ?>
+							</select>.
 						</fieldset>
 					<?php $index++; } while($index < count($_POST['pet'])); ?>
 					
 					<fieldset>
-						<button class="nl-adder">Tenho outro animal em casa</button>
+						<button class="nl-adder">Tenho um outro animal em casa</button>
 					</fieldset>
 					
-					<fieldset>
+					<!--<fieldset>
 						Já tenho um código de desconto: <?php field('discount',null,null,null,false); ?>
-					</fieldset>
+					</fieldset> -->
 					
 					<fieldset>
 						<button name="submit" class="nl-submit" type="submit">Pronto!</button>
@@ -98,8 +97,8 @@
 			<input type="hidden" name="pet[]" value="" />
 			Tenho também um <?php field('pet_type[]', null, null , ['dog','cat']); ?>
 			, chama-se <?php field('pet_name[]', null, $index) ?>, tem <?php field('pet_weight[]', null, null) ?> kg, 
-			e gostaria de comer <?php field('pet_food_type[]', null, null, ['kibble','cooked','raw']); ?>
-			</select>. <button class="info">?</button>
+			e gostaria de comer <?php field('pet_food_type[]', null, null, ['kibble','canned','cooked','raw']); ?>
+			</select>.
 		</fieldset>
 		
 		<script src="js/nlform.js"></script>

@@ -188,7 +188,9 @@
 			var self = this;
 			this.fld.className += ' nl-field-open';
 			var domObj = self.optionsList || self.getinputWrapper.parentElement;
-			var offset = (document.body.clientWidth - (this.fld.offsetLeft + domObj.offsetWidth));
+			var offset = (document.body.clientWidth - (this.fld.offsetLeft + this.fld.parentElement.offsetLeft + domObj.offsetWidth));
+//debugger;
+//console.log('offset: ' + offset);
 			if(self.getinput)
 				self.getinput.focus();	
 			if(offset < 0){
