@@ -1,5 +1,0 @@
-
-RewriteEngine on
-Options -Indexes
-RewriteCond %{HTTP_HOST} !sumsum.pt$ [NC]
-RewriteRule ^(.*)$ http://sumsum.pt/$1 [L,R=301]
