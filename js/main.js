@@ -53,7 +53,7 @@
 
 	var navigation = function() {
 
-		$('body').on('click', '#gtco-offcanvas ul a:not([class="external"]), .main-nav a:not([class="external"])', function(event){
+		$('body').on('click', '#gtco-offcanvas a:not([class="external"]), a:not([class="external"])', function(event){
 			var section = $(this).data('nav-section');
 				if ( $('[data-section="' + section + '"]').length ) {
 			    	$('html, body').animate({
